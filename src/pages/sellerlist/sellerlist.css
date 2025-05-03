@@ -1,0 +1,336 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.seller-list-section{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+}
+.seller-list-section .seller-list-header{
+    width: 100%;
+    height: 100%;
+    /* background-color: orange; */
+    overflow-y: scroll;
+}
+.seller-list-section .seller-list-header::-webkit-scrollbar{
+    width: 0px;
+}
+.seller-list-header .seller-list-top{
+    width: 100%;
+    height: 40px;
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.seller-list-top .seller-heading{
+    width: 230px;
+    height: 100%;
+    /* background-color: rgb(42, 112, 173); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.seller-heading .seller-icon{
+    width: 40px;
+    height: 40px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seller-icon svg{
+    font-size: 1.5em;
+    color: #303636;
+}
+.seller-heading h2{
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #303636;
+}
+.seller-heading .seller-count{
+    width: 20px;
+    height: 20px;
+    background-color: #cedae5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.seller-heading .seller-count h4{
+    font-size: 15px;
+    font-weight: 500;
+    color: #303636;
+}
+
+.add-btn-seller{
+    width: 270px;
+    height: 100%;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.add-btn-seller button{
+    width: 150px;
+    height: 35px;
+    background-color: #968a8a;
+    gap: 5px;
+    color: #fff;
+    font-size: 0.7em;
+
+}
+.add-btn-seller button .a-btn-e-icon{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.a-btn-e-icon svg{
+    font-size: 1.5em;
+}
+.seller-list-header .seller-cart-box{
+    width: 100%;
+    height: 300px;
+    /* background-color: yellow; */
+}
+.seller-list-header .seller-cart-box .seller-cart-part1{
+    width: 100%;
+    height: 200px;
+    /* background-color: rgb(153, 153, 119); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist{
+    width: 250px;
+    height: 130px;
+    background-color: #f8fff0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    
+}
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist:nth-child(1) {
+    background-color: #fffde0; 
+  }
+  
+  .seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist:nth-child(2) {
+    background-color: #c2ebfc; 
+  }
+  
+  .seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist:nth-child(3) {
+    background-color: #ffbaba; 
+  }
+  
+  .seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist:nth-child(4) {
+    background-color: #c4fcc4; 
+  }
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist .count-image{
+    width: 100%;
+    height: 50px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist .count-image .count-data{
+    width: 30px;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist .count-image .cart-image-box{
+    width: 50px;
+    height: 100%;
+    /* background-color: black; */
+
+}
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist .count-image .cart-image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.seller-list-header .seller-cart-box .seller-cart-part1 .cart-sellerlist .cart-box-name{
+    width: 100%;
+    height: 40px;
+    /* background-color: cadetblue; */
+    padding-left: 10px;
+    color: #303636;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.seller-list-header .seller-cart-box  .seller-cart-part2{
+    width: 100%;
+    height: 70px;
+    /* background-color: rgb(102, 102, 82); */
+    padding: 0px 15px 0px 15px;
+    
+}
+.seller-list-header .seller-cart-box  .seller-cart-part2 ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   box-shadow: 0px 0px 2px 1px #ede8e8;
+   border-radius: 10px;
+
+}
+.seller-list-header .seller-list-box{
+    width: 100%;
+    height: 600px;
+    /* background-color: blanchedalmond; */
+    padding: 10px;
+}
+.seller-list-box .seller-list-table{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 1px #ede8e8;
+}
+.seller-list-table .seller-table-top{
+    width: 100%;
+    height: 60px;
+    /* background-color: skyblue; */
+    display: flex;
+    justify-content: flex-end;
+}
+.seller-table-top .select-zone{
+    width: 250px;
+    height: 100% ;
+    /* background-color: #7d7474; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seller-table-top .select-zone .selectlistzone{
+    width: 95%;
+    height: 60%;
+    box-shadow: 0px 0px 2px 1px #ede8e8;
+}
+
+.seller-table-top .s-btn{
+    width: 400px;
+    height: 100%;
+    /* background-color: rgb(81, 42, 99); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.seller-table-top .s-btn .s-input{
+    width: 210px;
+    height: 30px;
+     /* background-color: rgb(179, 108, 187);  */
+    display: flex;
+    box-shadow: 0px 0px 2px 1px #ede8e8;
+    border-radius: 5px;
+   
+    
+}
+.seller-table-top .s-btn .s-input input{
+    width: 180px;
+    height: 100%;
+    outline: none;
+    border: 0px;
+    background-color: #ebf5ff;
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 5px;
+   padding-left: 10px;
+   
+   font-size: 12px;
+   
+}
+.seller-table-top .s-btn .s-input .icon-s{
+    width: 35px;
+    height: 30px;
+    background-color: #7d7474;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.seller-table-top .s-btn .s-input .icon-s svg{
+    font-size: 1em;
+    font-weight: 600;
+    color: #fff;
+}
+.seller-table-top .s-btn .ex-select{
+    width: 90px;
+    height: 30px;
+    
+}
+.seller-table-top .s-btn .ex-select .e-btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    color: #303636;
+    box-shadow: 0px 0px 2px 1px #ede8e8;
+    background-color: #fff;
+    
+}
+.e-btn svg{
+    color: #303636;
+}
+.seller-list-table .main-slist-table{
+    width: 100%;
+    height: 500px;
+    /* background-color: #7d7474; */
+    overflow-y: scroll;
+}
+.main-slist-table::-webkit-scrollbar{
+    width: 0px;
+}
+.main-slist-table table thead{
+    height: 40px;
+    position: sticky;
+    top: 0px;
+    background-color: #d4e4f3;   
+   z-index: 3;
+    color: #303636;
+    font-size: 15px;
+   
+}
+
+.main-slist-table table tbody tr td{
+    text-align: center;
+}
+.ac-box button{
+    min-width: 20px;
+   width: 25px;
+   height: 25px;
+   border: 1px solid brown;
+   margin: 10px;
+}
+
+.ac-box button.eypen{
+    background-color: #b9e880;
+    
+}
+
+.ac-box button svg{
+    color: #303636;
+    font-size: 15px;
+}
+
+

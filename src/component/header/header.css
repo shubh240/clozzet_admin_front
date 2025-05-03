@@ -1,0 +1,269 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.header-section{
+    width: 100vw;
+    height: 70px;
+    /* background-color:#f92c2c; */
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.header-section .main-header{
+    width: 100vw;
+    height: 100%;
+    /* background-color: #c73434; */
+    box-shadow: 0px 0px 4px 1px #e5e9e9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-section .top-left-side{
+    width: 400px;
+    height: 100%;
+    /* background-color: #4960d7; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+   
+    
+}
+.top-left-side .logo-box{
+    width: 180px;
+    height: 100%;
+    /* background-color: burlywood; */
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+
+.logo-box .symbole{
+    width: 60px;
+    height: 100%;
+
+}
+.symbole img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo-box .logo-text{
+    width: 160px;
+    height: 100%;
+    padding: 5px;
+}
+.logo-text img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.top-left-side .sidebar-btn{
+    width: 60px;
+    height: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px
+}
+.sidebar-btn button{
+   min-width: 30px;
+   width: 40px;
+   height: 40px;
+   background-color: #7588e5;
+}
+.sidebar-btn button svg{
+    font-size: 2em;
+    color: #fff;
+}
+/* top right side */
+.header-section .top-right-side{
+    width: 300px;
+    height: 100%;
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.top-right-side .message{
+    width: 50px;
+    height: 100%;
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.message button{
+    min-width: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #c7e0eb;
+    border-radius: 50%;
+}
+.message button svg{
+    font-size: 2em;
+    color: #708283;
+}
+.user-img-sms{
+    width: 100%;
+    height: 40px; 
+    /* background-color: blue; */
+    display: flex;
+    gap: 5px;
+    
+    
+} 
+.user-img-sms .u-sms-img{
+    width: 40px;
+    height: 100%;
+    /* background-color: #964b4b; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.u-sms-img .av-img{
+    width: 30px;
+    height: 30px;
+    /* background-color: black; */
+   
+}
+.av-img img{
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+   border-radius: 50%;
+}
+.user-img-sms .user-sms-info{
+    width: 200px;
+    height: 100%;
+    /* background-color: chartreuse; */
+   
+}
+.user-sms-info .u-s-name{
+    width: 100%;
+    height: 30px;
+    /* background-color: cornflowerblue; */
+    display: flex;
+}
+.u-s-name .sms-time{
+    width: 50px;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.u-s-name .sms-time  p{
+   
+    color: #303c3c;
+    font-size: 10px;
+}
+.user-sms-info .u-s-name h3{
+    color: #232929;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+.user-sms-info .sms-chat{
+    width: 100%;
+    height: 20px;
+    /* background-color: red; */
+}
+.user-sms-info .sms-chat  p{
+   overflow: hidden;
+   color: #7b8d8e;
+   font-size: 0.8em;
+}
+.user-img-sms .sms-count{
+    width: 40px;
+    height: 100%;
+    /* background-color: rgb(160, 194, 126); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sms-count .c-sms{
+    width: 20px;
+    height: 20px;
+    background-color: #5a72e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.9em;
+}
+.top-right-side .my-account-box{
+    width: 210px;
+    height: 100%;
+    /* background-color: #b97272; */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+.my-account-box .my-account{
+    width: 100%;
+    height: 40px;
+    /* background-color: darkorchid; */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.my-account .my-acc-img-box{
+    width: 35px;
+    height: 35px;
+    /* background-color: #232929; */
+   
+}
+.my-acc-img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.my-account .my-acc-info-box{
+    width: 140px;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.my-acc-info-box .my-h h3{
+    color: #232929;
+    font-weight: 500;
+    font-size: 0.9em;
+   
+}
+.my-acc-info-box .my-e{
+    width: 100%;
+    height: 50%;
+    /* background-color: yellow; */
+    
+    overflow: hidden;
+}
+
+.my-acc-info-box .my-e p{
+    font-weight: 500;
+    color: #7b8d8e;
+    font-size: 0.8em;
+   
+    
+}
+
+#basic-menu a{
+    text-decoration: none;
+}
