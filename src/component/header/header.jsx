@@ -61,10 +61,10 @@ const Header = () => {
         <div className="top-left-side">
           <div className="logo-box">
             <div className="symbole">
-              <img src="./images/Symbol.png" alt="" />
+              <img src="images/Symbol.png" alt="" />
             </div>
             <div className="logo-text">
-              <img src="./images/logotext.png" alt="" />
+              <img src="images/logotext.png" alt="" />
             </div>
           </div>
           <div className="sidebar-btn">
@@ -108,7 +108,7 @@ const Header = () => {
                   <div className="user-img-sms">
                     <div className="u-sms-img">
                       <div className="av-img">
-                        <img src="./images/userimg.jpg" alt="" />
+                        <img src="images/userimg.jpg" alt="" />
                       </div>
                     </div>
                     <div className="user-sms-info">
@@ -135,7 +135,7 @@ const Header = () => {
                   <div className="user-img-sms">
                     <div className="u-sms-img">
                       <div className="av-img">
-                        <img src="./images/userimg.jpg" alt="" />
+                        <img src="images/userimg.jpg" alt="" />
                       </div>
                     </div>
                     <div className="user-sms-info">
@@ -162,7 +162,7 @@ const Header = () => {
                   <div className="user-img-sms">
                     <div className="u-sms-img">
                       <div className="av-img">
-                        <img src="./images/userimg.jpg" alt="" />
+                        <img src="images/userimg.jpg" alt="" />
                       </div>
                     </div>
                     <div className="user-sms-info">
@@ -189,7 +189,7 @@ const Header = () => {
                   <div className="user-img-sms">
                     <div className="u-sms-img">
                       <div className="av-img">
-                        <img src="./images/userimg.jpg" alt="" />
+                        <img src="images/userimg.jpg" alt="" />
                       </div>
                     </div>
                     <div className="user-sms-info">
@@ -224,7 +224,7 @@ const Header = () => {
               >
                 <div className="my-account">
                   <div className="my-acc-img-box">
-                    <img src="./images/userimg.jpg" alt="" />
+                    <img src="images/userimg.jpg" alt="" />
                   </div>
                   <div className="my-acc-info-box">
                     <div className="my-h">

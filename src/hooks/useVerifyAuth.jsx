@@ -27,7 +27,7 @@ const useVerifyAuth = () => {
       }
     };
 
-    verifyAuth();
+    // verifyAuth();
   }, [dispatch]);
 };
 

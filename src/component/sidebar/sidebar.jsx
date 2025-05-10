@@ -6,6 +6,9 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
+import { FaTags } from "react-icons/fa";
+import { FaStore } from "react-icons/fa";
+import { FaImage } from "react-icons/fa";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -42,7 +45,33 @@ const Sidebar = () => {
               </Button>
             </Link>
           </li>
-          <li>
+         <li>
+            <Link to="/categories">
+              <Button >
+                <span className="side-icon">
+                  <FaTags />
+                </span>
+                Categories
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li> 
+         <li>
+            <Link to="/banners">
+              <Button >
+                <span className="side-icon">
+                  <FaImage />
+                </span>
+                Banners
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li> 
+          {/* <li>
             <Link to="/admin">
               <Button >
                 <span className="side-icon">
@@ -54,8 +83,21 @@ const Sidebar = () => {
                 </span>
               </Button>
             </Link>
-          </li>
-          <li>
+          </li> */}
+         <li>
+            <Link to="/store-list">
+              <Button >
+                <span className="side-icon">
+                  <FaStore />
+                </span>
+                Stores
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li> 
+          {/* <li>
             <Button
               className={`${activeTab === 1 ? "active" : ""}`}
               onClick={() => isOpenDropmenu(1)}
@@ -63,7 +105,7 @@ const Sidebar = () => {
               <span className="side-icon">
                 <IoMdPersonAdd />
               </span>
-              Seller Section
+              Store
               <span className="arrow">
                 <IoIosArrowForward />
               </span>
@@ -76,14 +118,14 @@ const Sidebar = () => {
             >
               <ul className="dropmenu">
                 <li>
-                  <Link to="/addnewseller">Add New Seller</Link>
+                  <Link to="/store-add">Add</Link>
                 </li>
                 <li>
-                  <Link to="sellerlist">Seller list</Link>
+                  <Link to="/store-list">List</Link>
                 </li>
               </ul>
             </div>
-          </li>
+          </li> */}
           <li>
             <Button
               className={`${activeTab === 2 ? "active" : ""}`}
@@ -98,7 +140,7 @@ const Sidebar = () => {
               </span>
             </Button>
             <div
-              className={`dropmenuwraper  ${activeTab === 2 && isToggleDropmenu === true
+              className={`dropmenuwraper ${activeTab === 2 && isToggleDropmenu === true
                 ? "colapse"
                 : "colapsed"
                 }`}

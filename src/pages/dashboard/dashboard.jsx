@@ -11,7 +11,7 @@ import {Link} from 'react-router-dom';
 const DashboardPage = () => {
     return (
         <>
-            <div className="dashboard-section">
+            {/* <div className="dashboard-section">
                 <div className="dashboard-header">
                     <div className="dashboard-top">
                         <div className="dashboard-left">
@@ -535,7 +535,7 @@ const DashboardPage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </>
     )
