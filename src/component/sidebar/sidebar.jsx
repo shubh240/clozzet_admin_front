@@ -57,7 +57,20 @@ const Sidebar = () => {
                 </span>
               </Button>
             </Link>
-          </li> 
+        </li> 
+         <li>
+            <Link to="/configs">
+              <Button >
+                <span className="side-icon">
+                  <FaTags />
+                </span>
+                Configs
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+        </li> 
          <li>
             <Link to="/banners">
               <Button >
@@ -70,7 +83,7 @@ const Sidebar = () => {
                 </span>
               </Button>
             </Link>
-          </li> 
+        </li> 
           {/* <li>
             <Link to="/admin">
               <Button >
