@@ -14,6 +14,7 @@ import StoreList from "./pages/store/list/StoreList.jsx";
 import StoreEdit from "./pages/store/edit/StoreEdit.jsx";
 import GoogleMapsLoader from "./layouts/google/GoogleMapsLoader.js";
 import Banner from "./pages/banner/Banner.jsx";
+import Config from "./pages/config/Config.jsx";
 
 const routes = createBrowserRouter(
   [
@@ -61,6 +62,10 @@ const routes = createBrowserRouter(
               <StoreEdit />
             </GoogleMapsLoader>
           ),
+        },
+         {
+          path: "/configs",
+          element: <Config />,
         },
       ],
     },
