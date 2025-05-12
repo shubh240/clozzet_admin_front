@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./sidebar.css";
 import { MdDashboard } from "react-icons/md";
-import { FaUser } from "react-icons/fa";
 import { IoMdPersonAdd } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Button from "@mui/material/Button";
@@ -9,6 +8,7 @@ import { Link } from "react-router-dom";
 import { FaTags } from "react-icons/fa";
 import { FaStore } from "react-icons/fa";
 import { FaImage } from "react-icons/fa";
+import { FaCog } from "react-icons/fa";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -62,7 +62,7 @@ const Sidebar = () => {
             <Link to="/configs">
               <Button >
                 <span className="side-icon">
-                  <FaTags />
+                  <FaCog />
                 </span>
                 Configs
                 <span className="arrow">

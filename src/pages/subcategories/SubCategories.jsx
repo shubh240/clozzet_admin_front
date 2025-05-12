@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { FaEdit, FaTrash } from "react-icons/fa";
@@ -12,6 +12,7 @@ const SubCategories = () => {
   const [subCategories, setSubCategories] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
+  const fileInputRef = useRef(null);
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
@@ -79,6 +80,7 @@ const SubCategories = () => {
       toast.success(isEditing ? "Subcategory updated!" : "Subcategory added!");
       setName("");
       setImage(null);
+fileInputRef.current.value = null;
       setIsEditing(false);
       setEditId(null);
       fetchSubCategories();
@@ -136,6 +138,7 @@ const SubCategories = () => {
           <input
             type="file"
             accept="image/*"
+            ref={fileInputRef}
             onChange={(e) => setImage(e.target.files[0])}
           />
         </div>
@@ -153,6 +156,7 @@ const SubCategories = () => {
                 setEditId(null);
                 setName("");
                 setImage(null);
+fileInputRef.current.value = null;
               }}
             >
               Cancel Edit
@@ -198,6 +202,7 @@ const SubCategories = () => {
                         setEditId(sub._id);
                         setName(sub.name);
                         setImage(null);
+fileInputRef.current.value = null;
                       }}
                     >
                       <FaEdit />

@@ -152,13 +152,6 @@ const Configs = () => {
                   >
                     <FaEdit />
                   </button>
-                  <button
-                    className="icon-btn"
-                    onClick={() => handleStatusToggle(conf._id)}
-                    title="Toggle Status"
-                  >
-                    <FaToggleOn />
-                  </button>
                 </td>
               </tr>
             ))
