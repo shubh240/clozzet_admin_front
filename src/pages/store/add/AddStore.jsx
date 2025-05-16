@@ -261,6 +261,63 @@ const AddStore = () => {
           </div>
         </fieldset>
 
+      {/* Bank Info */}
+        <fieldset className="form-section">
+          <legend>Bank Information</legend>
+          <div className="form-grid">
+            <div className="form-group">
+              <label>Bank Name:</label>
+              <input
+                type="text"
+                name="bankName"
+                value={form.bankName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Branch Name:</label>
+              <input
+                type="text"
+                name="branchName"
+                value={form.branchName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Account Holder Name:</label>
+              <input
+                type="text"
+                name="accountHolderName"
+                value={form.accountHolderName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>Account Number:</label>
+              <input
+                type="text"
+                name="accountNumber"
+                value={form.accountNumber}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label>IFSC Code:</label>
+              <input
+                type="text"
+                name="ifscCode"
+                value={form.ifscCode}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
+        </fieldset>
+
         {/* Address & Map */}
         <fieldset className="form-section">
           <legend>Address & Location</legend>

@@ -28,6 +28,11 @@ const StoreEdit = () => {
     lastName: "",
     logo: null,
     coverPhoto: null,
+      ifscCode:"",
+      accountNumber:"",
+      accountHolderName:"",
+      branchName:"",
+      bankName:"",
   });
 
   useEffect(() => {
@@ -61,6 +66,11 @@ const StoreEdit = () => {
             minimum: store?.limitTime?.minimum,
             maximum: store?.limitTime?.maximum,
           },
+          ifscCode:store?.ifscCode,
+          accountNumber:store?.accountNumber,
+          accountHolderName:store?.accountHolderName,
+          branchName:store?.branchName,
+          bankName:store?.bankName
         });
       } catch (err) {
         console.error(err);
@@ -219,6 +229,58 @@ const StoreEdit = () => {
                 type="file"
                 name="coverPhoto"
                 onChange={handleFileChange}
+              />
+            </div>
+          </div>
+        </fieldset>
+
+ {/* Bank Info */}
+        <fieldset className="form-section">
+          <legend>Bank Information</legend>
+          <div className="form-grid">
+            <div className="form-group">
+              <label>Bank Name:</label>
+              <input
+                type="text"
+                name="bankName"
+                value={storeData.bankName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Branch Name:</label>
+              <input
+                type="text"
+                name="branchName"
+                value={storeData.branchName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Account Holder Name:</label>
+              <input
+                type="text"
+                name="accountHolderName"
+                value={storeData.accountHolderName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Account Number:</label>
+              <input
+                type="text"
+                name="accountNumber"
+                value={storeData.accountNumber}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>IFSC Code:</label>
+              <input
+                type="text"
+                name="ifscCode"
+                value={storeData.ifscCode}
+                onChange={handleChange}
               />
             </div>
           </div>
