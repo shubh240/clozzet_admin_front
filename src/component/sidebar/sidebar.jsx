@@ -160,7 +160,7 @@ const Sidebar = () => {
             >
               <ul className="dropmenu">
                 <li>
-                  <Link to="/addnewseller">All</Link>
+                  <Link to="/order-list">All</Link>
                 </li>
                 <li>
                   <Link to="sellerlist">Scheduled</Link>
