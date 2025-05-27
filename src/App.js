@@ -15,6 +15,8 @@ import StoreEdit from "./pages/store/edit/StoreEdit.jsx";
 import GoogleMapsLoader from "./layouts/google/GoogleMapsLoader.js";
 import Banner from "./pages/banner/Banner.jsx";
 import Config from "./pages/config/Config.jsx";
+import Orders from "./pages/orders/Orders.jsx";
+import OrdersDetails from "./pages/orders/OrdersDetails.jsx";
 
 const routes = createBrowserRouter(
   [
@@ -66,6 +68,14 @@ const routes = createBrowserRouter(
          {
           path: "/configs",
           element: <Config />,
+        },
+        {
+          path: "/order-list",
+          element: <Orders />,
+        },
+        {
+          path: "/order-details/:orderId",
+          element: <OrdersDetails />,
         },
       ],
     },
