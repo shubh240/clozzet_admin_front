@@ -8,6 +8,7 @@ import useVerifyAuth from "./hooks/useVerifyAuth.jsx";
 
 import DashboardPage from "./pages/dashboard/dashboard";
 import Categories from "./pages/categories/Categories.jsx";
+import Colors from "./pages/colors/Colors.jsx";
 import SubCategories from "./pages/subcategories/SubCategories.jsx";
 import AddStore from "./pages/store/add/AddStore.jsx";
 import StoreList from "./pages/store/list/StoreList.jsx";
@@ -76,6 +77,10 @@ const routes = createBrowserRouter(
         {
           path: "/order-details/:orderId",
           element: <OrdersDetails />,
+        },
+           {
+          path: "/colors",
+          element: <Colors />,
         },
       ],
     },
