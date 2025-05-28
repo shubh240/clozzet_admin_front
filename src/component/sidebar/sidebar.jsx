@@ -5,7 +5,7 @@ import { IoMdPersonAdd } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
-import { FaTags } from "react-icons/fa";
+import { FaPalette, FaTags } from "react-icons/fa";
 import { FaStore } from "react-icons/fa";
 import { FaImage } from "react-icons/fa";
 import { FaCog } from "react-icons/fa";
@@ -83,7 +83,20 @@ const Sidebar = () => {
                 </span>
               </Button>
             </Link>
-        </li> 
+        </li>
+          <li>
+            <Link to="/colors">
+              <Button >
+                <span className="side-icon">
+                  <FaPalette />
+                </span>
+                Colors
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li>  
           {/* <li>
             <Link to="/admin">
               <Button >
