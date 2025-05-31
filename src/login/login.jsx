@@ -69,9 +69,9 @@ const Login = () => {
               placeholder="Password"
             />
             <button type="submit">Login</button>
-            <p>
+            {/* <p>
               New user <Link to={"/register"}>Register Here</Link>
-            </p>
+            </p> */}
           </form>
         </div>
       </div>
