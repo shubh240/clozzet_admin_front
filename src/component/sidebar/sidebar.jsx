@@ -153,6 +153,19 @@ const Sidebar = () => {
             </div>
           </li> */}
           <li>
+            <Link to="/order-list">
+              <Button >
+                <span className="side-icon">
+                  <FaStore />
+                </span>
+                Orders
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li>
+          {/* <li>
             <Button
               className={`${activeTab === 2 ? "active" : ""}`}
               onClick={() => isOpenDropmenu(2)}
@@ -239,7 +252,7 @@ const Sidebar = () => {
                 </li>
               </ul>
             </div>
-          </li>
+          </li> */}
         </ul>
       </div >
     </>

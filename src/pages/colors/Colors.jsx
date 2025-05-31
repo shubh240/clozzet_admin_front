@@ -185,7 +185,8 @@ const Colors = () => {
             {colors.length > 0 ? (
               colors.map((cat, index) => (
                 <tr key={cat._id}>
-                  <td>{index + 1}</td>
+                  <td>{index + 1 + (currentPage - 1) * pageSize}</td>
+                  {/* <td>{index + 1}</td> */}
                   <td>
                       {cat.name}
                   </td>
