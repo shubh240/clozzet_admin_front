@@ -187,12 +187,7 @@ const Colors = () => {
                 <tr key={cat._id}>
                   <td>{index + 1}</td>
                   <td>
-                    <Link
-                      to={`/colors/subcategories/${cat._id}`}
-                      style={{ color: "blue" }}
-                    >
                       {cat.name}
-                    </Link>
                   </td>
                   <td>
                     {cat.image && (
