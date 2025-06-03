@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { FaPalette, FaTags } from "react-icons/fa";
 import { FaStore } from "react-icons/fa";
 import { FaImage } from "react-icons/fa";
-import { FaCog } from "react-icons/fa";
+import { FaCog ,FaBullhorn } from "react-icons/fa";
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -165,6 +165,32 @@ const Sidebar = () => {
               </Button>
             </Link>
           </li>
+          <li>
+            <Link to="/advertisements">
+              <Button >
+                <span className="side-icon">
+                  <FaBullhorn />
+                </span>
+                Advertisements
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li> 
+          <li>
+            <Link to="/contents">
+              <Button >
+                <span className="side-icon">
+                  <FaBullhorn />
+                </span>
+                Content
+                <span className="arrow">
+                  <IoIosArrowForward />
+                </span>
+              </Button>
+            </Link>
+          </li> 
           {/* <li>
             <Button
               className={`${activeTab === 2 ? "active" : ""}`}
