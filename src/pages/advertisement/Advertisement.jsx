@@ -6,11 +6,11 @@ import "./index.css"; // optional: for custom styles
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
 
-const Banner = () => {
+const Advertisement = () => {
   const [name, setName] = useState("");
   const [slug, setSlug] = useState("");
   const [image, setImage] = useState(null);
-  const [bannerList, setBannerList] = useState([]);
+  const [advertisementList, setAdvertisementList] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
 
@@ -19,14 +19,14 @@ const Banner = () => {
   const fetchList = async () => {
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/v1/banner/list-banner`,
+        `${process.env.REACT_APP_API_URL}/api/v1/advertisement/list-advertisement`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
       );
-      setBannerList(res.data.data || []);
+      setAdvertisementList(res.data.data || []);
     } catch (error) {
       console.error("Error fetching categories:", error);
       toast.error("Failed to load categories.");
@@ -60,8 +60,8 @@ const Banner = () => {
     if (image) formData.append("image", image);
 
     const url = isEditing
-      ? `${process.env.REACT_APP_API_URL}/api/v1/banner/edit-banner/${editId}`
-      : `${process.env.REACT_APP_API_URL}/api/v1/banner/add-banner`;
+      ? `${process.env.REACT_APP_API_URL}/api/v1/advertisement/edit-advertisement/${editId}`
+      : `${process.env.REACT_APP_API_URL}/api/v1/advertisement/add-advertisement`;
 
     try {
       const method = isEditing ? axios.put : axios.post;
@@ -75,8 +75,8 @@ const Banner = () => {
 
       toast.success(
         isEditing
-          ? "Banner updated successfully!"
-          : "Banner added successfully!"
+          ? "Advertisement updated successfully!"
+          : "Advertisement added successfully!"
       );
       setName("");
       setSlug("");
@@ -85,9 +85,9 @@ const Banner = () => {
       setEditId(null);
       fetchList();
     } catch (error) {
-      console.error("Error saving banner:", error);
+      console.error("Error saving advertisement:", error);
       toast.error(
-        isEditing ? "Failed to update banner." : "Failed to add banner."
+        isEditing ? "Failed to update advertisement." : "Failed to add advertisement."
       );
     }
   };
@@ -106,45 +106,46 @@ const Banner = () => {
     if (result.isConfirmed) {
       try {
         await axios.delete(
-          `${process.env.REACT_APP_API_URL}/api/v1/banner/delete-banner/${id}`,
+          `${process.env.REACT_APP_API_URL}/api/v1/advertisement/delete-advertisement/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           }
         );
-        toast.success("Banner deleted successfully!");
+        toast.success("Advertisement deleted successfully!");
         fetchList();
       } catch (error) {
-        console.error("Error deleting Banner:", error);
-        toast.error("Failed to delete Banner.");
+        console.error("Error deleting Advertisement:", error);
+        toast.error("Failed to delete Advertisement.");
       }
     }
   };
 
-    const handleStatusToggle = async (id) => {
-      try {
-        const res = await axios.patch(
-          `${process.env.REACT_APP_API_URL}/api/v1/banner/status-banner/${id}`,
-          {},
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        toast.success(res.data.message);
-        fetchList();
-      } catch (error) {
-        console.error("Error toggling status:", error);
-        toast.error("Failed to update status.");
-      }
-    };
+  const handleStatusToggle = async (id) => {
+    try {
+      const res = await axios.patch(
+        `${process.env.REACT_APP_API_URL}/api/v1/advertisement/status-advertisement/${id}`,
+        {},
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      toast.success(res.data.message);
+      fetchList();
+    } catch (error) {
+      console.error("Error toggling status:", error);
+      toast.error("Failed to update status.");
+    }
+  };
+
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="category-form">
         <div className="form-group">
-          <label>Banner Name:</label>
+          <label>Advertisement Name:</label>
           <input
             type="text"
             value={name}
@@ -154,7 +155,7 @@ const Banner = () => {
         </div>
 
         <div className="form-group">
-          <label>Banner Slug:</label>
+          <label>Advertisement Slug:</label>
           <input
             type="text"
             value={slug}
@@ -164,7 +165,7 @@ const Banner = () => {
         </div>
 
         <div className="form-group">
-          <label>Banner Image:</label>
+          <label>Advertisement Image:</label>
           <input
             type="file"
             accept="image/*"
@@ -174,7 +175,7 @@ const Banner = () => {
 
         <div className="button-group">
           <button type="submit" className="btn">
-            {isEditing ? "Update Banner" : "Add Banner"}
+            {isEditing ? "Update Advertisement" : "Add Advertisement"}
           </button>
           {isEditing && (
             <button
@@ -196,7 +197,7 @@ const Banner = () => {
 
       <hr />
 
-      <h3>Banner List</h3>
+      <h3>Advertisement List</h3>
       <div className="table-wrapper">
         <table>
           <thead>
@@ -210,8 +211,8 @@ const Banner = () => {
             </tr>
           </thead>
           <tbody>
-            {bannerList.length > 0 ? (
-              bannerList.map((cat, index) => (
+            {advertisementList.length > 0 ? (
+              advertisementList.map((cat, index) => (
                 <tr key={cat._id}>
                   <td>{index + 1}</td>
                   <td>
@@ -229,7 +230,7 @@ const Banner = () => {
                       />
                     )}
                   </td>
-                   <td>
+                  <td>
                      <label className="switch">
                       <input
                         type="checkbox"
@@ -266,7 +267,7 @@ const Banner = () => {
             ) : (
               <tr>
                 <td colSpan="5" style={{ textAlign: "center" }}>
-                  No Banner Found.
+                  No Advertisement Found.
                 </td>
               </tr>
             )}
@@ -277,4 +278,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Advertisement;

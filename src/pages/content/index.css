@@ -84,8 +84,7 @@
   .btn.cancel:hover {
     background-color: #b3b3b3;
   }
-  
-  .switch {
+.switch {
   position: relative;
   display: inline-block;
   width: 44px;
@@ -128,4 +127,18 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(20px);
+}
+
+.page-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.page-form textarea {
+  resize: vertical;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }

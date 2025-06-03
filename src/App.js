@@ -9,6 +9,7 @@ import useVerifyAuth from "./hooks/useVerifyAuth.jsx";
 import DashboardPage from "./pages/dashboard/dashboard";
 import Categories from "./pages/categories/Categories.jsx";
 import Colors from "./pages/colors/Colors.jsx";
+import Advertisement from "./pages/advertisement/Advertisement.jsx";
 import SubCategories from "./pages/subcategories/SubCategories.jsx";
 import AddStore from "./pages/store/add/AddStore.jsx";
 import StoreList from "./pages/store/list/StoreList.jsx";
@@ -16,6 +17,7 @@ import StoreEdit from "./pages/store/edit/StoreEdit.jsx";
 import GoogleMapsLoader from "./layouts/google/GoogleMapsLoader.js";
 import Banner from "./pages/banner/Banner.jsx";
 import Config from "./pages/config/Config.jsx";
+import Content from "./pages/content/Content.jsx";
 import Orders from "./pages/orders/Orders.jsx";
 import OrdersDetails from "./pages/orders/OrdersDetails.jsx";
 
@@ -81,6 +83,14 @@ const routes = createBrowserRouter(
            {
           path: "/colors",
           element: <Colors />,
+        },
+        {
+          path: "/advertisements",
+          element: <Advertisement />,
+        },
+        {
+          path: "/contents",
+          element: <Content />,
         },
       ],
     },
