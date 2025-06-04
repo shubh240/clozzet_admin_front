@@ -245,8 +245,8 @@ const Header = () => {
                   "aria-labelledby": "basic-button",
                 }}
               >
-                <MenuItem onClick={handleMyAccountclose}>Profile</MenuItem>
-                <MenuItem onClick={handleMyAccountclose}>My account</MenuItem>
+                {/* <MenuItem onClick={handleMyAccountclose}>Profile</MenuItem>
+                <MenuItem onClick={handleMyAccountclose}>My account</MenuItem> */}
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
             </div>
