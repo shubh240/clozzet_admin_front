@@ -19,6 +19,7 @@ const Header = () => {
   const [myaccountdrop, setMyAccountDrop] = React.useState(null);
   const messageopen = Boolean(message);
   const accountopen = Boolean(myaccountdrop);
+  const token = localStorage.getItem("token");
 
   const handleMessageOpen = (event) => {
     setMessage(event.currentTarget);
@@ -41,14 +42,17 @@ const Header = () => {
       //console.log("Inside logout");
 
       const res = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/v1/admin/logout`
+        `${process.env.REACT_APP_API_URL}/api/v1/admin/logout`,
+        {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
       );
       // console.log("Inside logout after res");
-      // console.log(`Res is ${res}`);
-
-      navigate("/login");
-      toast.success(res.data.message);
-      dispatch(logout(null));
+        navigate("/login");
+        toast.success(res.data.message);
+        dispatch(logout(null));
       console.log("user loged out succesfully");
     } catch (error) {
       console.log(error);
