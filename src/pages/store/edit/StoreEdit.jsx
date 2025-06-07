@@ -31,7 +31,6 @@ const StoreEdit = () => {
       ifscCode:"",
       accountNumber:"",
       accountHolderName:"",
-      branchName:"",
       bankName:"",
   });
 
@@ -69,7 +68,6 @@ const StoreEdit = () => {
           ifscCode:store?.ifscCode,
           accountNumber:store?.accountNumber,
           accountHolderName:store?.accountHolderName,
-          branchName:store?.branchName,
           bankName:store?.bankName
         });
       } catch (err) {
@@ -244,15 +242,6 @@ const StoreEdit = () => {
                 type="text"
                 name="bankName"
                 value={storeData.bankName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label>Branch Name:</label>
-              <input
-                type="text"
-                name="branchName"
-                value={storeData.branchName}
                 onChange={handleChange}
               />
             </div>

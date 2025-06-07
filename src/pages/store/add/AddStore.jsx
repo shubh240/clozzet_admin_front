@@ -276,16 +276,6 @@ const AddStore = () => {
               />
             </div>
             <div className="form-group">
-              <label>Branch Name:</label>
-              <input
-                type="text"
-                name="branchName"
-                value={form.branchName}
-                onChange={handleChange}
-                required
-              />
-            </div>
-            <div className="form-group">
               <label>Account Holder Name:</label>
               <input
                 type="text"
