@@ -71,6 +71,24 @@ const StoreList = () => {
       }
     }
   };
+  const handleStatusToggle = async (id) => {
+      try {
+        const res = await axios.put(
+          `${process.env.REACT_APP_API_URL}/api/v1/store/toggle-status-store/${id}`,
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        toast.success(res.data.message);
+        fetchStores();
+      } catch (error) {
+        console.error("Error toggling status:", error);
+        toast.error("Failed to update status.");
+      }
+  };
 
   return (
     <div className="container">
@@ -99,6 +117,7 @@ const StoreList = () => {
               <th>City</th>
               <th>Logo</th>
               <th>Timings</th>
+              <th>Status</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -123,6 +142,16 @@ const StoreList = () => {
                   </td>
                   <td>
                     {store.limitTime?.minimum} - {store.limitTime?.maximum}
+                  </td>
+                  <td>
+                     <label className="switch">
+                      <input
+                        type="checkbox"
+                        checked={store.storeOn}
+                        onChange={() => handleStatusToggle(store._id)}
+                      />
+                      <span className="slider round"></span>
+                    </label>
                   </td>
                   <td>
                     <div
