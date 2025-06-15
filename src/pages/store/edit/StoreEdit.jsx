@@ -32,6 +32,7 @@ const StoreEdit = () => {
       accountNumber:"",
       accountHolderName:"",
       bankName:"",
+    password : ""
   });
 
   useEffect(() => {
@@ -68,7 +69,8 @@ const StoreEdit = () => {
           ifscCode:store?.ifscCode,
           accountNumber:store?.accountNumber,
           accountHolderName:store?.accountHolderName,
-          bankName:store?.bankName
+          bankName:store?.bankName,
+          sellerId:store?.sellerAuthId?._id || "",
         });
       } catch (err) {
         console.error(err);
@@ -169,6 +171,30 @@ const StoreEdit = () => {
     }
   };
 
+  
+  const handlePasswordUpdate = async () => {
+    if (!storeData.password) return toast.error("Please enter a password");
+
+    try {
+      const token = localStorage.getItem("token");
+      console.log('storeData?.sellerAuthId0',storeData)
+      await axios.put(
+        `${process.env.REACT_APP_API_URL}/api/v1/store/edit-password/${storeData?.sellerId}`,
+        { password: storeData.password },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      toast.success("Password updated successfully!");
+      setStoreData((prev) => ({ ...prev, password: "" }));
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to update password.");
+    }
+  };
   return (
     <div className="container">
       <form onSubmit={handleSubmit} className="category-form">
@@ -385,6 +411,42 @@ const StoreEdit = () => {
         <div className="text-right">
           <button type="submit" className="btn">
             Update Store
+          </button>
+        </div>
+        {/* Separate Password Update Section */}
+        <fieldset className="form-section">
+          <legend>Change Password</legend>
+          <div className="form-grid">
+            <div className="form-group">
+              <label>New Password:</label>
+              <input
+                type="password"
+                name="password"
+                value={storeData.password}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+            {/* <div className="form-group">
+              <button
+                type="button"
+                className="btn"
+                onClick={handlePasswordUpdate}
+                disabled={!storeData.password}
+              >
+                Update Password
+              </button>
+            </div> */}
+        </fieldset>
+        
+        <div className="text-right">
+          <button
+                type="button"
+                className="btn"
+                onClick={handlePasswordUpdate}
+                disabled={!storeData.password}
+              >
+                Update Password
           </button>
         </div>
       </form>
