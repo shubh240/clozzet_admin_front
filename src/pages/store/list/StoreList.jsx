@@ -90,6 +90,25 @@ const StoreList = () => {
       }
   };
 
+  const handleActiveToggle = async (id) => {
+      try {
+        const res = await axios.put(
+          `${process.env.REACT_APP_API_URL}/api/v1/store/toggle-active-store/${id}`,
+          {},
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+        toast.success(res.data.message);
+        fetchStores();
+      } catch (error) {
+        console.error("Error toggling status:", error);
+        toast.error("Failed to update status.");
+      }
+  };
+
   return (
     <div className="container">
       <div
@@ -118,6 +137,7 @@ const StoreList = () => {
               <th>Logo</th>
               <th>Timings</th>
               <th>Status</th>
+              <th>Active/In-Active</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -149,6 +169,16 @@ const StoreList = () => {
                         type="checkbox"
                         checked={store.storeOn}
                         onChange={() => handleStatusToggle(store._id)}
+                      />
+                      <span className="slider round"></span>
+                    </label>
+                  </td>
+                  <td>
+                     <label className="switch">
+                      <input
+                        type="checkbox"
+                        checked={store.isActive}
+                        onChange={() => handleActiveToggle(store._id)}
                       />
                       <span className="slider round"></span>
                     </label>
