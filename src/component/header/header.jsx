@@ -11,7 +11,6 @@ import { useNavigate, NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../redux/authSlice";
 
-
 const Header = () => {
   const context = useContext(MyContext);
 
@@ -44,17 +43,19 @@ const Header = () => {
       const res = await axios.get(
         `${process.env.REACT_APP_API_URL}/api/v1/admin/logout`,
         {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
       );
       // console.log("Inside logout after res");
-        navigate("/login");
-        toast.success(res.data.message);
-        dispatch(logout(null));
+      navigate("/login");
+      toast.success(res.data.message);
+      dispatch(logout(null));
       console.log("user loged out succesfully");
     } catch (error) {
+      navigate("/login");
+      dispatch(logout(null));
       console.log(error);
     }
   };
